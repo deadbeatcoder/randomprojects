@@ -1,59 +1,229 @@
-/* .bodypart {
+#letter-buttons {
+    position: absolute;
+    left: 4.5%;
+    top: 70%;
+    width: 100%;
+    height: 20%;
+    display: grid;
+    background-color: transparent;
+    grid-template-rows: repeat(2, 35%);
+    grid-template-columns: repeat(13, 7%);
+}
+.row1, .row2 {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+    background-color: slategray;
+}
+.guessed-correct {
+    background-color: #B2FBA5;
+}
+.guessed-wrong {
+    background-color: #FF6961;
+}
+
+
+#hangman-word {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    display: grid;
+    width: 100%;
+    height: 20%;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(18, 5%);
+}
+.word-letter {
+    width: 80%;
+    height: 40%;
+    aspect-ratio: 1 / 1;
+}
+.face {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 25%;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+.shownface {
+    background-color: #bdddee;
+    transform: rotateY(180deg);
+}
+.hiddenface {
+    background-color: #9a9a9a;
+}
+.space {
     visibility: hidden;
-} */
+}
+.shown > .shownface {
+    transform: rotateY(360deg);
+    display: flex;
+}
+.shown > .hiddenface {
+    transform: rotateY(180deg);
+    display: none;
+}
+.hidden > .shownface {
+    transform: rotateY(180deg);
+    display: none;
+}
+.hidden > .hiddenface {
+    transform: rotateY(360deg);
+    display: flex;
+}
+
+
+
 #hangman, #hang, #body{
     position: absolute;
+    background-color: transparent;
 }
 #hangman {
     position: absolute;
     left: 1em;
     top: 1em;
-    width: 400px;
-    height: 400px;
-    background-color: blue;
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
 }
 #hang {
-    width: 200px;
-    height: 125px;
-    left: 5%;
+    width: 50%;
+    height: 35%;
+    left: 20%;
     top: 5%;
-    background-color: skyblue;
+}
+.hanger {
+    position: absolute;
+    background-color: black;
+    color: black;
+}
+#anchor {
+    left: 5%;
+    top: 95%;
+    width: 60%;
+    height: 2%;
+}
+#supportleg1 {
+    left: 20%;
+    top: 15%;
+    width: 1.5%;
+    height: 80%;
+}
+#support {
+    left: 18%;
+    top: 25%;
+    height: 2%;
+    width: 20%;
+    transform: rotateZ(135deg);
+}
+#supportleg2 {
+    left: 20%;
+    top: 15%;
+    width: 70%;
+    height: 2%;
+}
+#noose {
+    left: 89%;
+    top: 15%;
+    width: 1.5%;
+    height: 10%;
 }
 #body {
-    width: 40px;
-    height: 100px;
-    left: 65%;
-    top: 20%;
-    background-color: pink;
+    width: 10%;
+    height: 22%;
+    left: 60%;
+    top: 13%;
 }
 .bodypart {
+    visibility: hidden;
     position: absolute;
     background-color: black;
     color: black;
 }
 #head {
-    left: 0px;
-    top: 0px;
+    left: 12%;
+    top: 3%;
     border: 3px solid black;
     background-color: transparent;
-    width: 90%;
+    width: 60%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
-#stick {
-    height: 20%;
+.r1, .r2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 5%;
+    background-color: black;
+    color: black;
 }
-.arm, .leg {
-    width: 40%;
-    aspect-ratio: 100 / 10;
+.r1 {
+    transform: rotateZ(45deg);
 }
-#leg1 {
-    left: 47%;
-    top: 30%;
+.r2 {
     transform: rotateZ(135deg);
 }
-#leg2 {
-    left: 53%;
-    top: 30%;
+.eye {
+    width: 20%;
+    height: 20%;
+    background-color: transparent;
+    color: black;
+}
+#eye1 {
+    left: 25%;
+    top: 15%;
+}
+#eye2 {
+    left: 52%;
+    top: 15%;
+}
+#mouth {
+    left: 32%;
+    top: 25%;
+    width: 30%;
+    height: 10%;
+    background-color: transparent;
+    border: 1px solid black;
+    border-color: transparent transparent transparent black;
+    -moz-border-radius: 50% 0 0 50%;
+    border-radius: 50% 0 0 50%;
+    transform: rotateZ(90deg);
+}
+#stick {
+    top: 34%;
+    height: 50%;
+    left: 47%;
+    width: 6%;
+}
+.arm, .leg {
+    width: 50%;
+    aspect-ratio: 100 / 10;
+}
+.arm {
+    top: 50%;
+}
+.leg {
+    top: 90%;
+}
+.left {
+    left: 7%;
+    transform: rotateZ(135deg);
+}
+.right {
+    right: 7%;
     transform: rotateZ(45deg);
 }
