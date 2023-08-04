@@ -1,26 +1,61 @@
 <head>
-<!--     <script src="main.js"></script> -->
+    <script src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="hangman">
         <div id="hang">
             <div id="anchor" class="hanger"></div>
-            <div id="leg1" class="hanger"></div>
+            <div id="supportleg1" class="hanger"></div>
             <div id="support" class="hanger"></div>
-            <div id="leg2" class="hanger"></div>
+            <div id="supportleg2" class="hanger"></div>
             <div id="noose" class="hanger"></div>
         </div>
         <div id="body">
             <div id="head" class="bodypart"></div>
             <div id="stick" class="bodypart"></div>
-            <div id="arm1" class="arm bodypart"></div>
-            <div id="arm2" class="arm bodypart"></div>
-            <div id="leg1" class="leg bodypart"></div>
-            <div id="leg2" class="leg bodypart"></div>
-            <div id="eye1" class="eye bodypart"></div>
-            <div id="eye2" class="eye bodypart"></div>
+            <div id="arm1" class="arm bodypart left"></div>
+            <div id="arm2" class="arm bodypart right"></div>
+            <div id="leg1" class="leg bodypart left"></div>
+            <div id="leg2" class="leg bodypart right"></div>
+            <div id="eye1" class="eye bodypart">
+                <div class="r1"></div>
+                <div class="r2"></div>
+            </div>
+            <div id="eye2" class="eye bodypart">
+                <div class="r1"></div>
+                <div class="r2"></div>
+            </div>
             <div id="mouth" class="bodypart"></div>
+        </div>
+        <div id="hangman-word"></div>
+        <div id="letter-buttons">
+            <div id="letter-a" onclick="func.reveal('a')" class="row1">a</div>
+            <div id="letter-b" onclick="func.reveal('b')" class="row1">b</div>
+            <div id="letter-c" onclick="func.reveal('c')" class="row1">c</div>
+            <div id="letter-d" onclick="func.reveal('d')" class="row1">d</div>
+            <div id="letter-e" onclick="func.reveal('e')" class="row1">e</div>
+            <div id="letter-f" onclick="func.reveal('f')" class="row1">f</div>
+            <div id="letter-g" onclick="func.reveal('g')" class="row1">g</div>
+            <div id="letter-h" onclick="func.reveal('h')" class="row1">h</div>
+            <div id="letter-i" onclick="func.reveal('i')" class="row1">i</div>
+            <div id="letter-j" onclick="func.reveal('j')" class="row1">j</div>
+            <div id="letter-k" onclick="func.reveal('k')" class="row1">k</div>
+            <div id="letter-l" onclick="func.reveal('l')" class="row1">l</div>
+            <div id="letter-m" onclick="func.reveal('m')" class="row1">m</div>
+            <div id="letter-n" onclick="func.reveal('n')" class="row2">n</div>
+            <div id="letter-o" onclick="func.reveal('o')" class="row2">o</div>
+            <div id="letter-p" onclick="func.reveal('p')" class="row2">p</div>
+            <div id="letter-q" onclick="func.reveal('q')" class="row2">q</div>
+            <div id="letter-r" onclick="func.reveal('r')" class="row2">r</div>
+            <div id="letter-s" onclick="func.reveal('s')" class="row2">s</div>
+            <div id="letter-t" onclick="func.reveal('t')" class="row2">t</div>
+            <div id="letter-u" onclick="func.reveal('u')" class="row2">u</div>
+            <div id="letter-v" onclick="func.reveal('v')" class="row2">v</div>
+            <div id="letter-w" onclick="func.reveal('w')" class="row2">w</div>
+            <div id="letter-x" onclick="func.reveal('x')" class="row2">x</div>
+            <div id="letter-y" onclick="func.reveal('y')" class="row2">y</div>
+            <div id="letter-z" onclick="func.reveal('z')" class="row2">z</div>
         </div>
     </div>
 </body>
